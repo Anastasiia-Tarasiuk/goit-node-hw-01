@@ -12,14 +12,6 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-// listContacts();
-
-// getContactById(5);
-
-// removeContact(1);
-
-// addContact('Bobby', 'hdfhdgfhf', 'jcjdjdhhdjhjh')
-
 
 function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
@@ -28,12 +20,12 @@ function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case "get":
-      getContactById(id)
+      getContactById(id);
       break;
 
-    // case "add":
-    //   // ... name email phone
-    //   break;
+    case "add":
+      addContact(name, email, phone)
+      break;
 
     case "remove":
       removeContact(id);
